@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Stats Viewer</title>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #stats {
+            display: none;
+            margin-top: 20px;
+        }
+        .stat-item {
+            margin: 10px 0;
+        }
+        #comments {
+            list-style: none;
+            padding: 0;
+        }
+        #comments li {
+            background: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        #login-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4285F4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #login-btn:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <h1>YouTube Stats Viewer</h1>
+
+    <!-- Login Button -->
+    <button id="login-btn">Log in with Google</button>
+
+    <!-- Display User Stats -->
+    <div id="stats">
+        <h2>Welcome, <span id="username"></span></h2>
+
+        <div class="stat-item">
+            <strong>Total Likes:</strong> <span id="total-likes">Loading...</span>
+        </div>
+        <div class="stat-item">
+            <strong>Subscriber Count:</strong> <span id="subscribers">Loading...</span>
+        </div>
+        <div class="stat-item">
+            <strong>Top Video:</strong> <span id="top-video">Loading...</span>
+        </div>
+        <div class="stat-item">
+            <strong>Top Video Views:</strong> <span id="top-video-views">Loading...</span>
+        </div>
+
+        <h3>Top 5 Comments</h3>
+        <ul id="comments">
+            <li>Loading...</li>
+        </ul>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="src/main.js"></script>
+</body>
+</html>
